@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "styles.css",
+  "sources": [
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport Home from './pages/Home.svelte';\n\n\tlet currentComponent = Home;\n\n\tasync function changeComponent (componentCode) {\n\t\tlet module;\n\n\t\tif (componentCode === 'Home') {\n\t\t\tmodule = Home;\n\t\t}\n\n\t\tif (componentCode === 'About') {\n\t\t\tmodule = (await import('./pages/About.svelte')).default;\n\t\t}\n\n\t\tif (componentCode === 'Foo') {\n\t\t\tmodule = (await import('./pages/Foo.svelte')).default;\n\t\t}\n\n\t\tcurrentComponent = module;\n\t}\n</script>\n\n<div class=\"menu\">\n\t<div on:click={() => changeComponent('Home')}>Home</div>\n\t<div on:click={() => changeComponent('About')}>About</div>\n\t<div on:click={() => changeComponent('Foo')}>Foo</div>\n</div>\n\n{#if currentComponent}\n\t<svelte:component this={currentComponent}/>\n{/if}\n\n<style>\n\t:global(body) {\n\t\tfont-family: sans-serif;\n\t}\n\n\t.menu {\n\t\tdisplay: flex;\n\t\tmargin-bottom: 4rem;\n\t}\n\n\t.menu > div {\n\t\tmargin-right: 1rem;\n\t}\n</style>"
+  ],
+  "names": [],
+  "mappings": "AAmCS,IAAI,AAAE,CAAC,AACd,WAAW,CAAE,UAAU,AACxB,CAAC,AAED,KAAK,4BAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACb,aAAa,CAAE,IAAI,AACpB,CAAC,AAED,mBAAK,CAAG,GAAG,cAAC,CAAC,AACZ,YAAY,CAAE,IAAI,AACnB,CAAC"
+}

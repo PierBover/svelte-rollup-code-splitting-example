@@ -1,0 +1,30 @@
+{
+  "name": "svelte-rollup-code-splitting-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rollup.config.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierBover/svelte-rollup-code-splitting-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierBover/svelte-rollup-code-splitting-example/issues"
+  },
+  "homepage": "https://github.com/PierBover/svelte-rollup-code-splitting-example#readme",
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "rollup": "^2.9.0",
+    "rollup-plugin-delete": "^1.2.0",
+    "rollup-plugin-svelte": "^5.2.1",
+    "sirv-cli": "^0.4.5",
+    "svelte": "^3.22.2"
+  }
+}
