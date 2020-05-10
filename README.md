@@ -1,6 +1,6 @@
 # Svelte + Rollup code splitting example
 
-This is a little example on how to configure Svelte and Rollup for code splitting and dynamic imports with `import()`.
+This is a little example on how to configure Svelte and Rollup for code splitting and dynamic imports using `import()`.
 
 I've left the `dist/bundle` folder so you can see the result of the build.
 
